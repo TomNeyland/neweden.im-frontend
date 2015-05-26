@@ -3,7 +3,7 @@ var bump = require('gulp-bump');
 var git = require('gulp-git');
 var filter = require('gulp-filter');
 var tag = require('gulp-tag-version');
-var runSequence = require('run-sequence');
+var runSequence = require('run-sequence').use(gulp);
 
 var config = {
     releaseImportance: 'patch'
@@ -14,7 +14,18 @@ function getImportance() {
 }
 
 function release() {
-    return runSequence('build', 'dobump', 'changelog', 'commit-release');
+    return runSequence('test:once', 'jshint', 'clean',
+        // these are done async
+        'copy:build',
+        'browserify:build',
+        'scss:build',
+        'cachebust',
+        'handlebars:build',
+        'generate-service-worker',
+        'uglify',
+        'dobump',
+        'changelog',
+        'commit-release');
 }
 
 gulp.task('dobump', function() {
