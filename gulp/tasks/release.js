@@ -5,15 +5,15 @@ var filter = require('gulp-filter');
 var tag = require('gulp-tag-version');
 
 var release = function(importance) {
-    return gulp.src(['./bower.json', './package.json'])
+    return gulp.src(['./bower.json', './package.json', './build'])
         .pipe(bump({
             type: importance
         }))
         .pipe(gulp.dest('./'))
-        .pipe(git.add({src:'build', args: '-f'}))
-        .pipe(git.commit('chore(release): Bumps package version'))
-        .pipe(filter('bower.json'))
-        .pipe(tag());
+        .pipe(git.add({args: '-f'}))
+        // .pipe(git.commit('chore(release): Bumps package version'))
+        // .pipe(filter('bower.json'))
+        // .pipe(tag());
 };
 
 gulp.task('patch', ['build'], function() {
