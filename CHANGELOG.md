@@ -7,12 +7,6 @@
 * **release:** Finally get a release working? ([6a709d28](https://github.com/TomNeyland/neweden.im-frontend.git/commit/6a709d280bbd1cdfdccafd8d0e291909c06f4f31))
 
 
-### 1.0.10 (2015-05-26)
-
-
-### 1.0.9 (2015-05-26)
-
-
 ### 1.0.8 (2015-05-26)
 
 
