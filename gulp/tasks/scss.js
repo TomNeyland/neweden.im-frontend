@@ -34,6 +34,10 @@ gulp.task('scss:build', function() {
     return gulp
         .src([config.scss.src].concat(config.scss.materialFiles))
         .pipe(concat('app.css'))
+        .pipe(plumber())
+        .pipe(sass({
+            errLogToConsole: true
+        }))
         .pipe(autoprefixer())
         .pipe(minify({
             keepSpecialComments: 0
