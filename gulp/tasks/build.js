@@ -2,11 +2,11 @@ var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
 gulp.task('build', function() {
-    runSequence(['test:once', 'jshint', 'clean'],
+    runSequence('test:once', 'jshint', 'clean',
         // these are done async
-        ['copy:build',
+        'copy:build',
         'browserify:build',
-        'scss:build'],
+        'scss:build',
         'cachebust',
         'handlebars:build',
         'generate-service-worker',
