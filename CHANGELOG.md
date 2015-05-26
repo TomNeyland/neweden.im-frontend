@@ -1,3 +1,11 @@
+### 1.0.6 (2015-05-26)
+
+
+#### Bug Fixes
+
+* **release:** More build fixes ([b002fcf0](https://github.com/TomNeyland/neweden.im-frontend.git/commit/b002fcf02cc853fc4ad887b2926180094b9aefcc))
+
+
 ### 1.0.5 (2015-05-26)
 
 
