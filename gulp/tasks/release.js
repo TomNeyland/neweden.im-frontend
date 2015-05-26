@@ -8,7 +8,8 @@ var release = function(importance) {
     gulp.src(['./bower.json', './package.json'])
         .pipe(bump({
             type: importance
-        }));
+        }))
+        .pipe(gulp.dest('./'));
 
     gulp.run('changelog');
 
