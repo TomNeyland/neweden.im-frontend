@@ -6,12 +6,12 @@ var tag = require('gulp-tag-version');
 var runSequence = require('run-sequence');
 
 function release(importance) {
-    return runSequence('bump', 'changelog', function(){
-        return doRelease(importance);
-    });
+    return runSequence(function() {
+        return doBump(importance);
+    }, 'changelog', 'commit-release');
 }
 
-function doRelease(importance) {
+function doBump(importance) {
     return gulp.src(['./bower.json', './package.json'])
         .pipe(bump({
             type: importance
@@ -19,7 +19,7 @@ function doRelease(importance) {
         .pipe(gulp.dest('./'));
 }
 
-gulp.task('dorelease', ['build'], function() {
+gulp.task('commit-release', ['build'], function() {
     return gulp.src(['./bower.json', './package.json', './CHANGELOG.md', './build'])
         .pipe(git.add({
             args: '-f'
@@ -40,5 +40,3 @@ gulp.task('feature', ['build'], function() {
 gulp.task('release', ['build'], function() {
     return release('major');
 });
-
-
