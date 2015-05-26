@@ -1,6 +1,14 @@
 ### 1.0.2 (2015-05-26)
 
 
+#### Bug Fixes
+
+* Misc fixes ([40c21916](https://github.com/TomNeyland/neweden.im-frontend.git/commit/40c219169c2a70e26cb695bfb2c5cf1fb2444969))
+
+
+### 1.0.2 (2015-05-26)
+
+
 ### 1.0.1 (2015-05-26)
 
 
