@@ -5,18 +5,25 @@ var filter = require('gulp-filter');
 var tag = require('gulp-tag-version');
 var runSequence = require('run-sequence');
 
-function release(importance) {
-    doBump(importance);
-    return runSequence('changelog', 'commit-release');
+var config = {
+    releaseImportance: 'patch'
+};
+
+function getImportance() {
+    return config.releaseImportance;
 }
 
-function doBump(importance) {
+function release() {
+    return runSequence('build', 'dobump', 'changelog', 'commit-release');
+}
+
+gulp.task('dobump', function() {
     return gulp.src(['./bower.json', './package.json'])
         .pipe(bump({
-            type: importance
+            type: getImportance()
         }))
         .pipe(gulp.dest('./'));
-}
+});
 
 gulp.task('commit-release', function() {
     return gulp.src(['./bower.json', './package.json', './CHANGELOG.md', './build', './build/*.*'])
@@ -28,14 +35,17 @@ gulp.task('commit-release', function() {
         .pipe(tag());
 });
 
-gulp.task('patch', ['build'], function() {
-    return release('patch');
+gulp.task('patch', function() {
+    config.releaseImportance = 'patch';
+    return release();
 });
 
-gulp.task('feature', ['build'], function() {
-    return release('minor');
+gulp.task('feature', function() {
+    config.releaseImportance = 'feature';
+    return release();
 });
 
-gulp.task('release', ['build'], function() {
-    return release('major');
+gulp.task('release', function() {
+    config.releaseImportance = 'release';
+    return release();
 });
