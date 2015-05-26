@@ -14,7 +14,6 @@ var release = function(importance) {
     gulp.run('changelog');
 
     return gulp.src(['./bower.json', './package.json', './CHANGELOG.md', './build'])
-        .pipe(gulp.dest('./'))
         .pipe(git.add({
             args: '-f'
         }))
