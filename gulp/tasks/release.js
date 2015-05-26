@@ -5,17 +5,19 @@ var filter = require('gulp-filter');
 var tag = require('gulp-tag-version');
 var runSequence = require('run-sequence');
 
-var release = function(importance) {
-    return runSequence('bump', 'changelog', 'dorelease');
-};
+function release(importance) {
+    return runSequence('bump', 'changelog', function(){
+        return doRelease(importance);
+    });
+}
 
-gulp.task('bump', function() {
+function doRelease(importance) {
     return gulp.src(['./bower.json', './package.json'])
         .pipe(bump({
             type: importance
         }))
         .pipe(gulp.dest('./'));
-});
+}
 
 gulp.task('dorelease', ['build'], function() {
     return gulp.src(['./bower.json', './package.json', './CHANGELOG.md', './build'])
@@ -40,4 +42,3 @@ gulp.task('release', ['build'], function() {
 });
 
 
-gulp.task()
