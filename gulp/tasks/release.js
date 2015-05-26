@@ -10,6 +10,7 @@ var release = function(importance) {
             type: importance
         }))
         .pipe(gulp.dest('./'))
+        .pipe(git.add({src:'build', args: '-f'}))
         .pipe(git.commit('chore(release): Bumps package version'))
         .pipe(filter('bower.json'))
         .pipe(tag());
