@@ -1,3 +1,11 @@
+### 1.0.8 (2015-05-26)
+
+
+#### Bug Fixes
+
+* **build:** Returns task sequence from task function ([0e3a49e0](https://github.com/TomNeyland/neweden.im-frontend.git/commit/0e3a49e0707769e93aca05b1df21a869bcc67349))
+
+
 ### 1.0.7 (2015-05-26)
 
 
