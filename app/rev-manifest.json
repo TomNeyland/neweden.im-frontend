@@ -1,0 +1,5 @@
+{
+    "app.css": "app.css",
+    "app.min.js": "app.min.js",
+    "registration.worker.js": "registration.worker.js"
+}
