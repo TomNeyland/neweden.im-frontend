@@ -26,9 +26,9 @@ gulp.task('dobump', function() {
 });
 
 gulp.task('commit-release', function() {
-    return gulp.src(['./bower.json', './package.json', './CHANGELOG.md', './build', './build/*.*'])
+    return gulp.src(['./bower.json', './package.json', './CHANGELOG.md', './build', './build/*.*', './build/*'])
         .pipe(git.add({
-            args: '-f'
+            args: '-f --all'
         }))
         .pipe(git.commit('chore(release): Bumps package version'))
         .pipe(filter('bower.json'))
