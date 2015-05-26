@@ -1,3 +1,5 @@
+import 'angular';
+import 'angular-mocks';
 import _ from 'lodash';
 
 describe('karma tests with chai', function() {

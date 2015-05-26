@@ -1,12 +1,16 @@
 module.exports = function(config) {
     config.set({
 
-        frameworks: ['mocha', 'browserify', 'chai'],
+        frameworks: ['mocha', 'browserify','chai'],
 
         files: [
-            './node_modules/angular/angular.js',
-            './node_modules/angular-mocks/angular-mocks.js',
-            'app/**/*.spec.js'
+            // Per test imports
+            // './node_modules/angular/angular.js',
+            // './node_modules/angular-mocks/angular-mocks.js',
+            // 'app/*.js',
+            // 'app/**/*.js',
+            'app/**/*.spec.js',
+            'app/*.spec.js',
         ],
 
         exclude: [
