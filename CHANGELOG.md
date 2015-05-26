@@ -1,3 +1,14 @@
+### 1.0.1 (2015-05-26)
+
+
+#### Bug Fixes
+
+* fix version number ([1f750c27](https://github.com/TomNeyland/neweden.im-frontend.git/commit/1f750c274118676d04451179f827cc182abf8d27))
+* **release:**
+  * Even more fixes ([091e5281](https://github.com/TomNeyland/neweden.im-frontend.git/commit/091e528189d8d309718985702d14875b42fa8621))
+  * Refactor and fix release tasks a bit more ([c59587bf](https://github.com/TomNeyland/neweden.im-frontend.git/commit/c59587bf649442db4bacc45b1cf621a6489b5027))
+
+
 ## 1.0.1 (2015-05-26)
 
 
