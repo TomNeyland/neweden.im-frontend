@@ -1,3 +1,16 @@
+### 1.0.4 (2015-05-26)
+
+
+#### Bug Fixes
+
+* Fixes various build issues ([d7494c4b](https://github.com/TomNeyland/neweden.im-frontend.git/commit/d7494c4b14c3e60e09af9e978fac40921288996b))
+
+
+#### Features
+
+* Adds cachebusting to app source ([99df12e2](https://github.com/TomNeyland/neweden.im-frontend.git/commit/99df12e2890c69aafc21ce8897c67406528eb304))
+
+
 ### 1.0.3 (2015-05-26)
 
 
