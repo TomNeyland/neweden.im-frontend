@@ -3,3 +3,11 @@ node_js:
   - "node"
   - "iojs"
 script: gulp build
+
+notifications:
+  webhooks:
+    urls:
+      - 'https://webhooks.gitter.im/e/511f0dc4470ca3aa1a3f'
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: always     # default: false
