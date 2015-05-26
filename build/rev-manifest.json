@@ -1,5 +1,6 @@
 {
-    "app.css": "app.css",
-    "app.min.js": "app.min.js",
-    "registration.worker.js": "registration.worker.js"
+  "app.css": "app-bb1e08d8.css",
+  "app.min.js": "app.min-0d2c6b69.js",
+  "registration.worker.js": "registration.worker-93f2ad73.js",
+  "service.worker.js": "service.worker-6ea2982a.js"
 }

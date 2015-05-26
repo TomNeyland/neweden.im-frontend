@@ -1,3 +1,12 @@
+### 1.0.7 (2015-05-26)
+
+
+#### Bug Fixes
+
+* Run build in sequence, nothing in parallel ([6fbe3928](https://github.com/TomNeyland/neweden.im-frontend.git/commit/6fbe392852811cf2f4fdec483cc3092f4c89a20a))
+* More release fixes... ([41e3320f](https://github.com/TomNeyland/neweden.im-frontend.git/commit/41e3320f24aa8774a3d627699ca4a9b4e7d349a3))
+
+
 ### 1.0.6 (2015-05-26)
 
 
