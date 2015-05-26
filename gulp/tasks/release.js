@@ -18,8 +18,8 @@ function doBump(importance) {
         .pipe(gulp.dest('./'));
 }
 
-gulp.task('commit-release', ['build'], function() {
-    return gulp.src(['./bower.json', './package.json', './CHANGELOG.md', './build'])
+gulp.task('commit-release', function() {
+    return gulp.src(['./bower.json', './package.json', './CHANGELOG.md', './build', './build/*.*'])
         .pipe(git.add({
             args: '-f'
         }))
