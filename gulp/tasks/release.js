@@ -6,9 +6,8 @@ var tag = require('gulp-tag-version');
 var runSequence = require('run-sequence');
 
 function release(importance) {
-    return runSequence(function() {
-        return doBump(importance);
-    }, 'changelog', 'commit-release');
+    doBump(importance);
+    return runSequence('changelog', 'commit-release');
 }
 
 function doBump(importance) {
