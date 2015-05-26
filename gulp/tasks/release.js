@@ -11,9 +11,9 @@ var release = function(importance) {
         }))
         .pipe(gulp.dest('./'))
         .pipe(git.add({args: '-f'}))
-        // .pipe(git.commit('chore(release): Bumps package version'))
-        // .pipe(filter('bower.json'))
-        // .pipe(tag());
+        .pipe(git.commit('chore(release): Bumps package version'))
+        .pipe(filter('bower.json'))
+        .pipe(tag());
 };
 
 gulp.task('patch', ['build'], function() {
