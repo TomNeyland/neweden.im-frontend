@@ -5,12 +5,18 @@ var filter = require('gulp-filter');
 var tag = require('gulp-tag-version');
 
 var release = function(importance) {
-    return gulp.src(['./bower.json', './package.json', './build'])
+    gulp.src(['./bower.json', './package.json'])
         .pipe(bump({
             type: importance
-        }))
+        }));
+
+    gulp.run('changelog');
+
+    return gulp.src(['./bower.json', './package.json', './CHANGELOG.md', './build'])
         .pipe(gulp.dest('./'))
-        .pipe(git.add({args: '-f'}))
+        .pipe(git.add({
+            args: '-f'
+        }))
         .pipe(git.commit('chore(release): Bumps package version'))
         .pipe(filter('bower.json'))
         .pipe(tag());
