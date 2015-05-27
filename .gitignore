@@ -13,7 +13,7 @@
 node_modules/
 npm-debug.log
 app/bower_components/
-bower_component/
+bower_components/
 app/templates.js
 build/
 Vagrantfile
