@@ -1,3 +1,11 @@
+### 1.1.4 (2015-05-26)
+
+
+#### Bug Fixes
+
+* **chatroom:** Revert to previous socket name ([3af3166d](https://github.com/TomNeyland/neweden.im-frontend.git/commit/3af3166ddf8234c20ce36e7c84c55fb6b72bb98b))
+
+
 ### 1.1.3 (2015-05-26)
 
 
