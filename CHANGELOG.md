@@ -1,3 +1,11 @@
+### 1.1.1 (2015-05-26)
+
+
+#### Bug Fixes
+
+* **1.1.0:** Add excluded build files ([fa724103](https://github.com/TomNeyland/neweden.im-frontend.git/commit/fa724103215857d2edd9ea4611d00032ca3a4c52))
+
+
 ### 1.1.0 (2015-05-26)
 
 
