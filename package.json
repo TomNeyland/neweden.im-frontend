@@ -1,6 +1,6 @@
 {
     "name": "neweden.im-frontend",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "Angular Material based frontend for neweden.im",
     "repository": {
         "type": "git",
@@ -90,7 +90,9 @@
             ]
         },
         "angular-ui-utils": {
-            "depends": ["angular"]
+            "depends": [
+                "angular"
+            ]
         }
     },
     "dependencies": {

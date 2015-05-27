@@ -1,3 +1,17 @@
+### 1.0.10 (2015-05-26)
+
+
+#### Bug Fixes
+
+* Adds missing deps ([4a7b8995](https://github.com/TomNeyland/neweden.im-frontend.git/commit/4a7b8995e81197f90c87e6560026ce3b41ebd03a))
+* Fixes changelog ([df563625](https://github.com/TomNeyland/neweden.im-frontend.git/commit/df5636255f661800c52e85a1f2d7ceb19cd6b699))
+
+
+#### Features
+
+* **chatroom:** Adds initial code for the chatroom module. Very WIP ([1db26202](https://github.com/TomNeyland/neweden.im-frontend.git/commit/1db2620297bbedf53b2db8b0a1e2250c1551dd93))
+
+
 ### 1.0.9 (2015-05-26)
 
 
