@@ -2,27 +2,22 @@ import angular from 'angular';
 import 'angular-ui-router';
 
 import filtersModule from './common/filters';
-
 import exampleModule from './example';
+import chatroomModule from './chatroom';
 
-const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [
+var appModule = angular.module('app', [
     'ui.router',
     filtersModule.name,
-    exampleModule.name
-])
+    exampleModule.name,
+    chatroomModule.name
+]);
 
-.config([
-    '$stateProvider',
-    '$urlRouterProvider',
-    '$httpProvider',
-    AppStateConfig
-])
 
-.constant('version', require('../package.json').version)
+appModule.constant('version', require('../package.json').version);
 
-.run(['$rootScope', '$state', '$stateParams',
+
+appModule.run(['$rootScope', '$state', '$stateParams',
     function($rootScope, $state, $stateParams) {
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
@@ -31,16 +26,23 @@ angular.module(MODULE_NAME, [
             console.log('failed to change routes', arguments);
         });
     }
+
 ]);
 
-function AppStateConfig($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('');
 
-    $stateProvider.state('app', {
-        url: '',
-        abstract: true,
-        template: '<div ui-view></div>'
-    });
-}
+appModule.config([
+    '$stateProvider',
+    '$urlRouterProvider',
+    '$httpProvider',
+    function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('');
+        $stateProvider.state('app', {
+            url: '',
+            abstract: true,
+            template: '<div ui-view></div>'
+        });
+    }
+]);
 
-angular.bootstrap(document.querySelector('html'), [MODULE_NAME]);
+
+angular.bootstrap(document.querySelector('html'), ['app']);

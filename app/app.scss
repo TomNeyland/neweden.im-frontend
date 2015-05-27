@@ -2,3 +2,6 @@
 @import 'assets/stylesheets/partials/global/functions';
 @import 'assets/stylesheets/partials/global/mixins';
 @import 'assets/stylesheets/partials/global/extends';
+
+// make this an automatic build level import?
+@import 'chatroom/_chatroom';

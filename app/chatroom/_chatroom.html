@@ -1,0 +1,54 @@
+<section layout="row" flex="">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools">NewEden.im</h1>
+        </md-toolbar>
+        <md-content flex layout-padding="">
+            You are in a chatroom
+        </md-content>
+    </md-sidenav>
+    <md-content flex="" layout-padding="">
+        <div layout="column" layout-fill="" layout-align="top center">
+            <md-list flex="90" style="flex: 85;">
+                <md-list-item class="md-2-line" ng-repeat="message in Chatroom.messages">
+                    <img class="character-image" ng-src="https://image.eveonline.com/Character/{{message.CharacterID}}_64.jpg" class="face" alt="{{message.who}}">
+                    <div class="md-list-item-text">
+                        <h4>{{message.CharacterName}}</h4>
+                        <p>{{message.body}}</p>
+                    </div>
+                    <md-divider md-inset ng-if="!$last"></md-divider>
+                </md-list-item>
+            </md-list>
+            <md-input-container flex="10" style="flex: 15; max-height: 15em;">
+                <label>Message</label>
+                <textarea name="message" ng-model="Chatroom.currentMessage" ui-keypress="{13:'Chatroom.sendMessage(Chatroom.currentMessage)'}"></textarea>
+            </md-input-container>
+        </div>
+        <div flex=""></div>
+    </md-content>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+        <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">Members</h1>
+        </md-toolbar>
+        <md-content flex layout-padding="">
+            <form>
+                <md-input-container>
+                    <label for="testInput">Fake search</label>
+                    <input type="text" id="testInput" ng-model="data" md-sidenav-focus="">
+                </md-input-container>
+            </form>
+            <md-list>
+                <md-list-item class="md-1-line" ng-repeat="(cid, character) in Chatroom.members">
+                    <img class="character-image" ng-src="https://image.eveonline.com/Character/{{character.CharacterID}}_64.jpg" class="face" alt="{{character.CharacterName}}">
+                    <div class="md-list-item-text">
+                        <h4>{{character.CharacterName}}</h4>
+                    </div>
+                </md-list-item>
+                <md-divider md-inset ng-if="!$last"></md-divider>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+</section>
+<pre>
+    {{Chatroom.members}}
+</pre>
