@@ -39,7 +39,7 @@ appModule.config([
         $stateProvider.state('app', {
             url: '',
             abstract: true,
-            template: '<div ui-view></div>'
+            template: '<div ui-view flex></div>'
         });
     }
 ]);
