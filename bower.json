@@ -16,6 +16,6 @@
     "tests"
   ],
   "devDependencies": {
-    "angular-ui-utils": "~0.2.3"
+    "angular-ui-utils": "bower"
   }
 }
