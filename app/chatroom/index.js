@@ -12,7 +12,7 @@ var chatroomModule = angular.module('app.chatroom', ['ui.router', 'ui.keypress',
 
 chatroomModule.factory('chatSocket', ['socketFactory', function(socketFactory) {
     return socketFactory({
-        ioSocket: io.connect('/chat'),
+        ioSocket: io.connect('/api/chat'),
         room: 'notifications'
     });
 }]);
@@ -102,7 +102,6 @@ chatroomModule.controller('ChatroomCtrl', ChatroomCtrl);
 chatroomModule.config(['$stateProvider', function($stateProvider) {
 
     $stateProvider.state('chatroom', {
-        parent: 'app',
         url: '/room/:chatroom',
         template: require('./_chatroom.html'),
         controller: 'ChatroomCtrl',

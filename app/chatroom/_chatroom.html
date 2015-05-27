@@ -7,9 +7,9 @@
             You are in a chatroom
         </md-content>
     </md-sidenav>
-    <md-content flex="" layout-padding="">
-        <div layout="column" layout-fill="" layout-align="top center">
-            <md-list flex="90" style="flex: 85;">
+    <md-content layout="column" layout-fill>
+        <!-- <div layout="column" layout-fill> -->
+            <md-list flex="90" style="flex: 90;">
                 <md-list-item class="md-2-line" ng-repeat="message in Chatroom.messages">
                     <img class="character-image" ng-src="https://image.eveonline.com/Character/{{message.CharacterID}}_64.jpg" class="face" alt="{{message.who}}">
                     <div class="md-list-item-text">
@@ -19,14 +19,14 @@
                     <md-divider md-inset ng-if="!$last"></md-divider>
                 </md-list-item>
             </md-list>
-            <md-input-container flex="10" style="flex: 15; max-height: 15em;">
+            <md-input-container flex="10" style="flex: 10; max-height: 10em;">
                 <label>Message</label>
                 <textarea name="message" ng-model="Chatroom.currentMessage" ui-keypress="{13:'Chatroom.sendMessage(Chatroom.currentMessage)'}"></textarea>
             </md-input-container>
-        </div>
+        <!-- </div> -->
         <div flex=""></div>
     </md-content>
-    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
         <md-toolbar class="md-theme-light">
             <h1 class="md-toolbar-tools">Members</h1>
         </md-toolbar>
@@ -49,6 +49,3 @@
         </md-content>
     </md-sidenav>
 </section>
-<pre>
-    {{Chatroom.members}}
-</pre>
