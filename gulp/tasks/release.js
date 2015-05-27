@@ -14,8 +14,10 @@ function getImportance() {
 }
 
 function release() {
-    return runSequence('test:once', 'jshint', 'clean',
-        // these are done async
+    return runSequence(
+        'test:once',
+        'jshint',
+        'clean',
         'copy:build',
         'browserify:build',
         'scss:build',
@@ -46,17 +48,17 @@ gulp.task('commit-release', function() {
         .pipe(tag());
 });
 
-gulp.task('patch', function() {
+gulp.task('release:patch', function() {
     config.releaseImportance = 'patch';
     return release();
 });
 
-gulp.task('feature', function() {
-    config.releaseImportance = 'feature';
+gulp.task('release:minor', function() {
+    config.releaseImportance = 'minor';
     return release();
 });
 
-gulp.task('release', function() {
-    config.releaseImportance = 'release';
+gulp.task('release:major', function() {
+    config.releaseImportance = 'major';
     return release();
 });
