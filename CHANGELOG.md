@@ -1,3 +1,13 @@
+### 1.1.3 (2015-05-26)
+
+
+#### Bug Fixes
+
+* **app:** Makes top level abstract ui-view a flex item ([dbda4b5a](https://github.com/TomNeyland/neweden.im-frontend.git/commit/dbda4b5a5eacd4770f51abe5229374baa2b159ca))
+* **bower:** Fixes package version reference ([f09398e2](https://github.com/TomNeyland/neweden.im-frontend.git/commit/f09398e250eb544221a578f935994371d1c808f1))
+* **chatroom:** Fixes chatroom styling and renames the main state ([4321a96b](https://github.com/TomNeyland/neweden.im-frontend.git/commit/4321a96b9a17b7628e4ffaa49404338e63005294))
+
+
 ### 1.1.2 (2015-05-26)
 
 
