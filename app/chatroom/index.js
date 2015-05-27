@@ -12,7 +12,7 @@ var chatroomModule = angular.module('app.chatroom', ['ui.router', 'ui.keypress',
 
 chatroomModule.factory('chatSocket', ['socketFactory', function(socketFactory) {
     return socketFactory({
-        ioSocket: io.connect('/api/chat'),
+        ioSocket: io.connect('/chat'),
         room: 'notifications'
     });
 }]);
