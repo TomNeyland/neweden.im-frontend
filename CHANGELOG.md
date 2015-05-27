@@ -1,3 +1,11 @@
+### 1.1.5 (2015-05-26)
+
+
+#### Bug Fixes
+
+* **socketio:** Fixes socketio issue caused by version differences ([c58a41a9](https://github.com/TomNeyland/neweden.im-frontend.git/commit/c58a41a934c3975c70895700bc18ec3fa0654bf0))
+
+
 ### 1.1.4 (2015-05-26)
 
 
