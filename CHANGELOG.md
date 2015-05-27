@@ -1,3 +1,17 @@
+### 1.1.2 (2015-05-26)
+
+
+#### Bug Fixes
+
+* **gitignore:** Fixes typo in gitignore ([025199d0](https://github.com/TomNeyland/neweden.im-frontend.git/commit/025199d0136f4c97a204aef63d2900a0ccda0896))
+* **release:** Read the docs, fixed bugs ([ec4c6de4](https://github.com/TomNeyland/neweden.im-frontend.git/commit/ec4c6de4383988c3bf539b9a2b07db1d4059947a))
+
+
+#### Features
+
+* **travis:** Travis now runs the full build ([19ecda05](https://github.com/TomNeyland/neweden.im-frontend.git/commit/19ecda05e75303a615f68f52814787c1a940758b))
+
+
 ### 1.1.1 (2015-05-26)
 
 
