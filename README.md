@@ -1,4 +1,6 @@
 # neweden.im-frontend
+
+[![Join the chat at https://gitter.im/TomNeyland/neweden.im-frontend](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/TomNeyland/neweden.im-frontend?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/TomNeyland/neweden.im-frontend)
 [![Tag](https://img.shields.io/github/tag/TomNeyland/neweden.im-frontend.svg?style=flat)](https://github.com/TomNeyland/neweden.im-frontend)
 [![Build](https://travis-ci.org/TomNeyland/neweden.im-frontend.svg)](https://travis-ci.org/TomNeyland/neweden.im-frontend)
