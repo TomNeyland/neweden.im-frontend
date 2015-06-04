@@ -17,7 +17,7 @@
 ### JavaScript
 - Each module should be totally self-contained. Any functionality shared across modules should be moved into `common/`.
 - Modules can have their own directives, services, filters, etc. If multiple files are needed in order to maintain file size,
-a folder should be created (`directives/`, `services/`, etc) and the broken up files should be placed into their respective folders
+a folder should be created and the files sensibly divided by function.
 with less abstract naming conventions.
 - JavaScript files should always be as close as possible - preferably on the same level - as their HTML partials.
 - If a directive has a partial - which they tend to - a new folder should be created that is named accordingly (meaning not something generic)
