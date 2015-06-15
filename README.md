@@ -4,7 +4,8 @@
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/TomNeyland/neweden.im-frontend)
 [![Tag](https://img.shields.io/github/tag/TomNeyland/neweden.im-frontend.svg?style=flat)](https://github.com/TomNeyland/neweden.im-frontend)
 [![Build](https://travis-ci.org/TomNeyland/neweden.im-frontend.svg)](https://travis-ci.org/TomNeyland/neweden.im-frontend)
-[![David](https://david-dm.org/TomNeyland/neweden.im-frontend.svg)](https://david-dm.org/TomNeyland/neweden.im-frontend.svg)
+[![Dependency Status](https://david-dm.org/TomNeyland/neweden.im-frontend.svg)](https://david-dm.org/TomNeyland/neweden.im-frontend)
+[![devDependency Status](https://david-dm.org/TomNeyland/neweden.im-frontend/dev-status.svg)](https://david-dm.org/TomNeyland/neweden.im-frontend#info=devDependencies)
 ## Usage
 
 1. `make dependencies`
