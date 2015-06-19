@@ -58,7 +58,7 @@
         "run-sequence": "^1.0.1",
         "socket.io-client": "0.9.16",
         "stripify": "^3.0.0",
-        "sw-precache": ">=2.0.0",
+        "sw-precache": ">=1.2",
         "vinyl-buffer": "^1.0.0",
         "vinyl-source-stream": "^1.0.0",
         "watchify": "^3.1.2"
